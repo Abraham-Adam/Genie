@@ -2,8 +2,8 @@ services:
   - type: web
     name: genie-ai-backend
     env: node
-    buildCommand: cd server && npm install
-    startCommand: cd server && node index.js
+    buildCommand: npm install
+    startCommand: node index.js
     envVars:
       - key: NODE_ENV
         value: production
@@ -11,3 +11,4 @@ services:
         sync: false
     plan: free
     region: oregon
+    # Remove rootDirectory to use the project root

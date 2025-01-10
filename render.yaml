@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: genie-ai-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+    plan: free
+    region: oregon
